@@ -63,7 +63,7 @@ npm install
 
 #### 2. Configurar as Variáveis de Ambiente
 
-Crie um arquivo `.env` na raiz do projeto contendo as suas credenciais. **Atenção:** Nunca envie ou faça *commit* deste arquivo para repositórios públicos.
+Altere as variáveis abaixo do arquivo "hardhat.config.js" com os seus dados reais.
 
 ```env
 SEPOLIA_URL="sua_url_do_alchemy_aqui"
