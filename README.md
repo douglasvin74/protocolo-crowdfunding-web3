@@ -25,6 +25,7 @@ O protocolo é modular e composto por 4 contratos inteligentes (*Smart Contracts
 | :--- | :--- | :--- |
 | **`PlatformToken`** | `ERC-20` | Token nativo (**PLT**) de utilidade e poder de voto. Implementa `ERC20Votes` e `ERC20Permit` para viabilizar assinaturas *gasless* e delegação de votos. |
 | **`CampaignNFT`** | `ERC-1155` | Recibos de doação e tokens de recompensa multifuncionais divididos em múltiplos níveis (*Tiers*: Bronze, Silver, Gold). |
+| **`CrowdfundingCore`** | `Integração Chainlink` | O coração financeiro do protocolo. Recebe investimentos em ETH, consome o Oráculo da Chainlink (Feed ETH/USD) em tempo real e emite o NFT de recompensa de forma autônoma. |
 | **`Staking`** | `ReentrancyGuard` | Contrato de retenção de liquidez que recompensa investidores engajados com rendimentos (*yield*) baseados no tempo real decorrido (`block.timestamp`). |
 | **`CrowdfundingDAO`** | `Governor` | Governança descentralizada baseada em *OpenZeppelin Governor*. Os detentores do token **PLT** decidem o rumo da plataforma de forma automatizada, transparente e 100% *on-chain*. |
 

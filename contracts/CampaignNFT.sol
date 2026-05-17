@@ -9,8 +9,8 @@ contract CampaignNFT is ERC1155, Ownable {
     using Strings for uint256;
 
     // Nome e símbolo para plataformas como OpenSea reconhecerem a coleção
-    string public name = "Crowdfunding Rewards";
-    string public symbol = "CRWD-NFT";
+    string public constant name = "Crowdfunding Rewards";
+    string public constant symbol = "CRWD-NFT";
 
     // Definindo os IDs dos Níveis (Tiers) de recompensa do Crowdfunding
     uint256 public constant TIER_BRONZE = 1;

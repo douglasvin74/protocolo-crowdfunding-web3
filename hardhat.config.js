@@ -10,8 +10,8 @@ export default {
   },
    networks: {
      sepolia: {
-       url: "https://eth-sepolia.g.alchemy......",
-       accounts: ["SUA_CHAVE_PRIVADA"]
+       url: "SUA_URL_RPC",
+       accounts: ["SUA_CHAVE_PRIVADA_META_MASK"]
      }
    }
 };

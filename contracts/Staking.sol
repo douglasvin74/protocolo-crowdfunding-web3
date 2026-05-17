@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
 contract Staking is ReentrancyGuard {
-    IERC20 public platformToken;
+    IERC20 public immutable platformToken;
 
     // Mapeamento para rastrear quanto cada usuário depositou e quando
     mapping(address => uint256) public stakedBalances;
