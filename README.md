@@ -56,19 +56,26 @@ Antes de iniciar, certifique-se de ter instalado em sua máquina:
 #### 1. Clonar o Repositório e Instalar as Dependências
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd protocolo-tic29
+git clone https://github.com/douglasvin74/protocolo-crowdfunding-web3.git
+cd protocolo-crowdfunding-web3
 npm install
 ```
 
-#### 2. Configurar as Variáveis de Ambiente
+#### 2. Configurar as variáveis de ambiente
 
-Altere as variáveis abaixo do arquivo "hardhat.config.js" com os seus dados reais.
+Copie o `.env.example` para `.env` e preencha com os seus dados. O `.env` está no
+`.gitignore` e **nunca** deve ser versionado.
 
-```env
-SEPOLIA_URL="sua_url_do_alchemy_aqui"
-PRIVATE_KEY="sua_chave_privada_da_metamask_aqui"
+```bash
+cp .env.example .env
 ```
+
+| Variável | O que é |
+| :--- | :--- |
+| `SEPOLIA_RPC_URL` | URL de RPC da Sepolia (Alchemy ou Infura) |
+| `PRIVATE_KEY` | Chave privada da carteira de deploy — use uma carteira exclusiva para testnet, nunca a principal |
+
+> Nunca coloque a chave privada em arquivo versionado, incluindo o `hardhat.config.js`.
 
 #### 3. Compilar e Executar Testes Locais
 

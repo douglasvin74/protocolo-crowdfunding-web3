@@ -1,4 +1,5 @@
 import "@nomicfoundation/hardhat-toolbox";
+import "dotenv/config";
 
 /** @type import('hardhat/config').HardhatUserConfig */
 export default {
@@ -8,10 +9,11 @@ export default {
       evmVersion: "cancun"
     }
   },
-   networks: {
-     sepolia: {
-       url: "SUA_URL_RPC",
-       accounts: ["SUA_CHAVE_PRIVADA_META_MASK"]
-     }
-   }
+  networks: {
+    sepolia: {
+      // Definidos no .env, que nunca e versionado. Ver .env.example.
+      url: process.env.SEPOLIA_RPC_URL || "",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : []
+    }
+  }
 };
